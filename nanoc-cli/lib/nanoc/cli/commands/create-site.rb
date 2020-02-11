@@ -52,7 +52,7 @@ module Nanoc::CLI::Commands
       #compile '/**/*.md' do
       #  filter :kramdown
       #  layout '/default.*'
-      #  write item.identifier.without_ext + '/index.html'
+      #  write (item.identifier.without_ext + '/index.html').sub(/index\\\/index.html/, 'index.html')
       #end
 
       compile '/**/*' do
